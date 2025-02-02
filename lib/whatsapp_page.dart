@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whatsapp_ui/theme.dart';
+import 'package:whatsapp_ui/widgets/call_widget.dart';
 import 'package:whatsapp_ui/widgets/chat_widget.dart';
 import 'package:whatsapp_ui/widgets/status_widget.dart';
 
@@ -56,13 +57,13 @@ class _WhatsappPageState extends State<WhatsappPage>
       ),
       body: TabBarView(
         controller: _tabController,
-        children: [
-          const Center(
+        children: const [
+          Center(
             child: Icon(Icons.camera_alt),
           ),
-          const ChatWidget(),
-          const StatusWidget(),
-          Container(),
+          ChatWidget(),
+          StatusWidget(),
+          CallWidget(),
         ],
       ),
     );
